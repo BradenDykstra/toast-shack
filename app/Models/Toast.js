@@ -27,7 +27,7 @@ export default class Toast {
         let cookTemplate;
         switch (darkness) {
             case "10":
-                cookTemplate = `<h4>This looks like charcoal... This used to be bread?</h4>`;
+                cookTemplate = `<h4>This looks like charcoal... It used to be bread?</h4>`;
                 break;
             case "9":
                 cookTemplate = `<h4>Is this food anymore? Is it still edible?</h4>`;
