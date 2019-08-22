@@ -16,7 +16,7 @@ export default class Toast {
         template += `</ul>`
         template += `<form onsubmit="app.controllers.toastController.addTopping(${index}, event)">
                         <input type="text" class="form-control mb-2" name="topping" placeholder="Add a topping!">
-                        <button class="btn btn-success mb-3" type="submit">+</button>
+                        <button class="btn btn-success mb-3" type="submit"><i class="fas fa-plus"></i></button>
                         </form>`
         template += `<button class="btn btn-danger mb-3" onclick="app.controllers.toastController.deleteToast(${index})">Delete</button>
             </div>`
@@ -48,7 +48,7 @@ export default class Toast {
                 cookTemplate = `<h4>It's a bit light, but there's nothing wrong with that.</h4>`;
                 break;
             case "3":
-                cookTemplate = `<h4>You can barely tell that it got darker.</h4>`;
+                cookTemplate = `<h4>You can barely tell, but it is darker.</h4>`;
                 break;
             case "2":
                 cookTemplate = `<h4>Should we put this back in the toaster?</h4>`;
@@ -62,7 +62,7 @@ export default class Toast {
     drawToppings(index) {
         let topTemplate = "";
         this.toppings.forEach((topping, tIndex) => {
-            topTemplate += `<li>${topping} <span class="text-danger span-btn" onclick="app.controllers.toastController.deleteTopping(${index}, ${tIndex})">X</span></li>`
+            topTemplate += `<li>${topping} <span class="text-danger span-btn" onclick="app.controllers.toastController.deleteTopping(${index}, ${tIndex})"><i class="fas fa-times"></i></span></li>`
         });
         return topTemplate
     }
