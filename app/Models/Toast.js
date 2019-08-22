@@ -10,7 +10,7 @@ export default class Toast {
                 <h1><span class="text-dark">Name:</span> ${this.name}</h1>
                 <h3><span class="text-dark">Cooktime:</span> ${this.darkness}</h3>`
         template += this.drawDarkness(this.darkness);
-        template += `<h4 class="text-dark">Toppings:</h4>
+        template += `<hr><h4 class="text-dark">Toppings:</h4>
                 <ul>`
         template += this.drawToppings(index)
         template += `</ul>`
